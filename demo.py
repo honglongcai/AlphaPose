@@ -76,6 +76,13 @@ if __name__ == "__main__":
         start_time = getTime()
         with torch.no_grad():
             (inps, orig_img, im_name, boxes, scores, pt1, pt2) = det_processor.read()
+            print('inps:', inps)
+            print('orig_img:', orig_img)
+            print('im_name:', im_name)
+            print('boxes:', boxes)
+            print('scores:', scores)
+            print('pt1:', pt1)
+            print('pt2:', pt2)
             if boxes is None or boxes.nelement() == 0:
                 writer.save(None, None, None, None, None, orig_img, im_name.split('/')[-1])
                 continue
