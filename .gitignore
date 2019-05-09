@@ -1,3 +1,5 @@
+.idea
+.DS_Store
 human_detection/output
 examples/results
 examples/res
