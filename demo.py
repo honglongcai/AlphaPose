@@ -79,7 +79,7 @@ if __name__ == "__main__":
             h, w, _ = orig_img.shape
             boxes = torch.tensor([[0.0, 0.0, w, h]])
             pt1 = torch.tensor([[0.0, 0.0]])
-            pt2 = torch.tensor([[w, h]])
+            pt2 = torch.tensor([[float(w), float(h)]])
             print('inps:', inps)
             print('orig_img:', orig_img)
             print('im_name:', im_name)
