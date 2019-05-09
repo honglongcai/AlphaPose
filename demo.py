@@ -76,7 +76,7 @@ if __name__ == "__main__":
         start_time = getTime()
         with torch.no_grad():
             (inps, orig_img, im_name, boxes, scores, pt1, pt2) = det_processor.read()
-            boxes = torch.tensor([[pt1[0], pt1[1], pt2[0], pt2[1]]])
+            boxes = torch.tensor([[pt1[0][0], pt1[0][1], pt2[0][0], pt2[0][1]]])
             print('inps:', inps)
             print('orig_img:', orig_img)
             print('im_name:', im_name)
